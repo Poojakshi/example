@@ -1,7 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
 import { AppComponent } from './app.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -15,11 +13,23 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule} from '@angular/material/select';
 import {MatCardModule} from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
-import { TestServiceService } from './test-service.service';
+import { ContentComponent } from './content/content.component';
+import { CreatorComponent } from './creator/creator.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { FoodComponent } from './food/food.component';
+ import { ProfileComponent } from './profile/profile.component';
+//import { UserProfileComponent } from './user-profile/user-profile.component';
+import { VisitorProfileComponent } from './visitor-profile/visitor-profile.component';
+import { CreatorProfileComponent } from './creator-profile/creator-profile.component';
+import { EmployeeProfileComponent } from './employee-profile/employee-profile.component';
+import {MatTableModule } from '@angular/material/table' ;
+import {NgConfirmModule} from 'ng-confirm-box';
+import { NgToastModule } from 'ng-angular-popup';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +37,16 @@ import { TestServiceService } from './test-service.service';
     NavbarComponent,
     RegistrationFormComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    ContentComponent,
+    CreatorComponent,
+    EmployeeComponent,
+    FoodComponent,
+     ProfileComponent,
+    //UserProfileComponent,
+    VisitorProfileComponent,
+    CreatorProfileComponent,
+    EmployeeProfileComponent
    
     
   ],
@@ -38,13 +57,16 @@ import { TestServiceService } from './test-service.service';
      MatToolbarModule,
      MatButtonModule, 
      MatRadioModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatSelectModule,
-    MatCardModule,
-    MatFormFieldModule,
-    HttpClientModule
+     MatTableModule ,
+     BrowserAnimationsModule,
+     FormsModule,
+     ReactiveFormsModule,
+     MatSelectModule,
+     MatCardModule,
+     MatFormFieldModule,
+     HttpClientModule,
+     NgConfirmModule,
+     NgToastModule
   ],
   
   
